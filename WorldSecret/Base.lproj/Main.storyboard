@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="9oo-LP-zLu">
+    <device id="ipad12_9" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Stage View Controller-->
+        <scene sceneID="KJ7-ia-THT">
+            <objects>
+                <viewController id="9oo-LP-zLu" customClass="StageViewController" customModule="WorldSecret" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eck-ca-9fg"/>
+                        <viewControllerLayoutGuide type="bottom" id="kBi-bJ-aLM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="i49-mv-AQc">
+                        <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="294-3Z-Z9x">
+                                <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
+                            </containerView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="curtainSide" translatesAutoresizingMaskIntoConstraints="NO" id="WCZ-2r-k6e" userLabel="curtainLeft">
+                                <rect key="frame" x="0.0" y="0.0" width="683" height="1024"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="curtainSide" translatesAutoresizingMaskIntoConstraints="NO" id="wuj-gr-T8J" userLabel="curtainRight">
+                                <rect key="frame" x="683" y="0.0" width="683" height="1024"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="topCurtain" translatesAutoresizingMaskIntoConstraints="NO" id="oNB-nC-qTd">
+                                <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="oNB-nC-qTd" firstAttribute="top" secondItem="i49-mv-AQc" secondAttribute="top" id="3W0-AE-vnh"/>
+                            <constraint firstItem="294-3Z-Z9x" firstAttribute="top" secondItem="i49-mv-AQc" secondAttribute="top" id="Aao-cs-UUX"/>
+                            <constraint firstItem="kBi-bJ-aLM" firstAttribute="top" secondItem="WCZ-2r-k6e" secondAttribute="bottom" id="GX8-S3-Fkd"/>
+                            <constraint firstAttribute="trailing" secondItem="wuj-gr-T8J" secondAttribute="trailing" id="GiY-3T-GUW"/>
+                            <constraint firstItem="WCZ-2r-k6e" firstAttribute="width" secondItem="wuj-gr-T8J" secondAttribute="width" id="J45-Kc-FFj"/>
+                            <constraint firstItem="294-3Z-Z9x" firstAttribute="leading" secondItem="i49-mv-AQc" secondAttribute="leading" id="Jtc-YD-kJI"/>
+                            <constraint firstItem="kBi-bJ-aLM" firstAttribute="top" secondItem="294-3Z-Z9x" secondAttribute="bottom" id="K1C-pD-2RV"/>
+                            <constraint firstItem="WCZ-2r-k6e" firstAttribute="top" secondItem="i49-mv-AQc" secondAttribute="top" id="MH3-vb-WGh"/>
+                            <constraint firstAttribute="trailing" secondItem="294-3Z-Z9x" secondAttribute="trailing" id="OPq-6r-zj0"/>
+                            <constraint firstItem="WCZ-2r-k6e" firstAttribute="leading" secondItem="i49-mv-AQc" secondAttribute="leading" id="RJT-fL-Rj6"/>
+                            <constraint firstItem="kBi-bJ-aLM" firstAttribute="top" secondItem="wuj-gr-T8J" secondAttribute="bottom" id="XZ0-rH-jMH"/>
+                            <constraint firstAttribute="trailing" secondItem="oNB-nC-qTd" secondAttribute="trailing" id="bbK-d0-mGT"/>
+                            <constraint firstItem="oNB-nC-qTd" firstAttribute="leading" secondItem="i49-mv-AQc" secondAttribute="leading" id="blV-rA-eod"/>
+                            <constraint firstItem="kBi-bJ-aLM" firstAttribute="top" secondItem="oNB-nC-qTd" secondAttribute="bottom" id="ebA-3B-8Ql"/>
+                            <constraint firstItem="wuj-gr-T8J" firstAttribute="top" secondItem="i49-mv-AQc" secondAttribute="top" id="owG-Mv-WKr"/>
+                            <constraint firstItem="wuj-gr-T8J" firstAttribute="leading" secondItem="WCZ-2r-k6e" secondAttribute="trailing" id="vWO-TN-p5f"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="containerView" destination="294-3Z-Z9x" id="FQQ-Jc-ZtQ"/>
+                        <outlet property="leftCurtainLeadingConstraint" destination="RJT-fL-Rj6" id="VKs-Vd-VXP"/>
+                        <outlet property="leftCurtainTrailingConstraint" destination="vWO-TN-p5f" id="Ofq-xF-uH9"/>
+                        <outlet property="rightCurtainTrailingConstraint" destination="GiY-3T-GUW" id="IRI-wA-FJY"/>
+                        <outlet property="topCurtainTopConstraint" destination="3W0-AE-vnh" id="gDl-fi-enE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="unA-H7-BKb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-528" y="122"/>
+        </scene>
+        <!--Forest View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="ForestViewController" id="BYZ-38-t0r" customClass="ForestViewController" customModule="WorldSecret" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Forest" translatesAutoresizingMaskIntoConstraints="NO" id="uSV-m2-PT8">
+                                <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="knight" translatesAutoresizingMaskIntoConstraints="NO" id="An9-TF-C12">
+                                <rect key="frame" x="1301" y="740" width="220" height="220"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="220" id="XE4-eC-LZ2"/>
+                                    <constraint firstAttribute="width" secondItem="An9-TF-C12" secondAttribute="height" multiplier="1:1" id="bf7-Mp-rUv"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="witch" translatesAutoresizingMaskIntoConstraints="NO" id="Yqj-AL-ESH">
+                                <rect key="frame" x="0.0" y="742" width="205" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="UAa-Lg-9cs"/>
+                                    <constraint firstAttribute="width" constant="205" id="kWS-V5-k1E"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="frog" translatesAutoresizingMaskIntoConstraints="NO" id="Hig-m4-6xh">
+                                <rect key="frame" x="1301" y="740" width="220" height="220"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Stone" translatesAutoresizingMaskIntoConstraints="NO" id="KT9-JK-ad6">
+                                <rect key="frame" x="893" y="922" width="73" height="102"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="102" id="Ig5-7A-qY6"/>
+                                    <constraint firstAttribute="width" constant="73" id="Vim-dz-19O"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Yqj-AL-ESH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="9Zd-N7-cgB"/>
+                            <constraint firstItem="Hig-m4-6xh" firstAttribute="width" secondItem="An9-TF-C12" secondAttribute="width" id="B7w-by-xZ8"/>
+                            <constraint firstItem="Hig-m4-6xh" firstAttribute="centerX" secondItem="An9-TF-C12" secondAttribute="centerX" id="FZn-nu-lgi"/>
+                            <constraint firstItem="Hig-m4-6xh" firstAttribute="centerY" secondItem="An9-TF-C12" secondAttribute="centerY" id="NST-Qz-hoi"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="An9-TF-C12" secondAttribute="bottom" constant="64" id="PqD-Gw-9m6"/>
+                            <constraint firstItem="uSV-m2-PT8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="RrY-VQ-1dd"/>
+                            <constraint firstAttribute="trailing" secondItem="uSV-m2-PT8" secondAttribute="trailing" id="UuM-gg-IXs"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Yqj-AL-ESH" secondAttribute="bottom" constant="82" id="VNa-De-Q5e"/>
+                            <constraint firstAttribute="trailing" secondItem="KT9-JK-ad6" secondAttribute="trailing" constant="400" id="VvD-h3-Ve4"/>
+                            <constraint firstItem="Hig-m4-6xh" firstAttribute="height" secondItem="An9-TF-C12" secondAttribute="height" id="aqb-wb-xxA"/>
+                            <constraint firstItem="uSV-m2-PT8" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="br5-we-dOe"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="KT9-JK-ad6" secondAttribute="bottom" id="mjl-he-BaI"/>
+                            <constraint firstItem="An9-TF-C12" firstAttribute="trailing" secondItem="uSV-m2-PT8" secondAttribute="trailing" constant="155" id="qcq-XX-6Y6"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="uSV-m2-PT8" secondAttribute="bottom" id="xBA-K1-l5h"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="frogView" destination="Hig-m4-6xh" id="1t6-FA-1Ef"/>
+                        <outlet property="playerView" destination="An9-TF-C12" id="eDK-Kg-QRK"/>
+                        <outlet property="playerViewTrailingConstraint" destination="qcq-XX-6Y6" id="TeY-3K-1Bk"/>
+                        <outlet property="stoneImageView" destination="KT9-JK-ad6" id="pbC-3G-bjH"/>
+                        <outlet property="witchView" destination="Yqj-AL-ESH" id="voT-5u-sxH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="179.64860907759882" y="122.46093749999999"/>
+        </scene>
+        <!--Garden View Controller-->
+        <scene sceneID="n9V-Bx-pK1">
+            <objects>
+                <viewController storyboardIdentifier="GardenViewController" id="YGW-Bg-lRh" customClass="GardenViewController" customModule="WorldSecret" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9Z4-em-O3a"/>
+                        <viewControllerLayoutGuide type="bottom" id="F9h-w2-zxy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="MZI-zG-eNb">
+                        <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Gardens" translatesAutoresizingMaskIntoConstraints="NO" id="X9g-z7-T4N">
+                                <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="X9g-z7-T4N" firstAttribute="leading" secondItem="MZI-zG-eNb" secondAttribute="leading" id="C3x-6X-gGR"/>
+                            <constraint firstAttribute="trailing" secondItem="X9g-z7-T4N" secondAttribute="trailing" id="OI6-6d-kvU"/>
+                            <constraint firstItem="F9h-w2-zxy" firstAttribute="top" secondItem="X9g-z7-T4N" secondAttribute="bottom" id="Wnl-E4-QBa"/>
+                            <constraint firstItem="X9g-z7-T4N" firstAttribute="top" secondItem="MZI-zG-eNb" secondAttribute="top" id="tiA-zI-BWk"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xBg-Dk-Nc0" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="180" y="846"/>
+        </scene>
+        <!--Dungeon View Controller-->
+        <scene sceneID="YfA-B5-0nN">
+            <objects>
+                <viewController storyboardIdentifier="DungeonViewController" id="X5X-sq-XRP" customClass="DungeonViewController" customModule="WorldSecret" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="u1y-vt-fxZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="dB0-n7-wST"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4KE-yq-POz">
+                        <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dungeon" translatesAutoresizingMaskIntoConstraints="NO" id="rl4-40-UpN">
+                                <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="KlausAngry" translatesAutoresizingMaskIntoConstraints="NO" id="4JZ-4h-ue0">
+                                <rect key="frame" x="272" y="452" width="187" height="245"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="245" id="SHh-qB-U8x"/>
+                                    <constraint firstAttribute="width" constant="187" id="V3b-1M-dGW"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="dB0-n7-wST" firstAttribute="top" secondItem="rl4-40-UpN" secondAttribute="bottom" id="0yg-i2-bVJ"/>
+                            <constraint firstItem="rl4-40-UpN" firstAttribute="top" secondItem="4KE-yq-POz" secondAttribute="top" id="Hn2-9n-YBU"/>
+                            <constraint firstItem="4JZ-4h-ue0" firstAttribute="leading" secondItem="4KE-yq-POz" secondAttribute="leadingMargin" constant="252" id="UPa-OL-rns"/>
+                            <constraint firstItem="dB0-n7-wST" firstAttribute="top" secondItem="4JZ-4h-ue0" secondAttribute="bottom" constant="327" id="bd0-aj-6MP"/>
+                            <constraint firstAttribute="trailing" secondItem="rl4-40-UpN" secondAttribute="trailing" id="iol-cJ-1ht"/>
+                            <constraint firstItem="rl4-40-UpN" firstAttribute="leading" secondItem="4KE-yq-POz" secondAttribute="leading" id="v0i-Jc-tkK"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dLy-Mf-uJo" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="907" y="122"/>
+        </scene>
+        <!--Throne View Controller-->
+        <scene sceneID="HiF-Jm-kB5">
+            <objects>
+                <viewController storyboardIdentifier="ThroneViewController" id="V5d-BZ-gfA" customClass="ThroneViewController" customModule="WorldSecret" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fKd-V5-WeJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="glD-Ba-XgL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fsh-lA-c7f">
+                        <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Throne" translatesAutoresizingMaskIntoConstraints="NO" id="wUm-A2-x4s">
+                                <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kingBody" translatesAutoresizingMaskIntoConstraints="NO" id="NJS-Ap-vXv">
+                                <rect key="frame" x="492.5" y="545" width="341" height="181"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="181" id="K1i-eE-cPn"/>
+                                    <constraint firstAttribute="width" constant="341" id="uk4-bn-uZ5"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="justin" translatesAutoresizingMaskIntoConstraints="NO" id="QaC-Mn-NCj">
+                                <rect key="frame" x="639" y="452" width="98" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="98" id="Rge-KT-e0a"/>
+                                    <constraint firstAttribute="height" constant="128" id="wCL-th-Ple"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="NJS-Ap-vXv" firstAttribute="top" secondItem="QaC-Mn-NCj" secondAttribute="bottom" constant="-35" id="ATe-Od-aoG"/>
+                            <constraint firstAttribute="trailing" secondItem="wUm-A2-x4s" secondAttribute="trailing" id="PRA-dX-RTd"/>
+                            <constraint firstItem="QaC-Mn-NCj" firstAttribute="centerX" secondItem="NJS-Ap-vXv" secondAttribute="centerX" constant="25" id="QFO-OV-8qw"/>
+                            <constraint firstItem="glD-Ba-XgL" firstAttribute="top" secondItem="NJS-Ap-vXv" secondAttribute="bottom" constant="298" id="R9T-zh-yW2"/>
+                            <constraint firstItem="NJS-Ap-vXv" firstAttribute="centerX" secondItem="wUm-A2-x4s" secondAttribute="centerX" constant="-20" id="gdC-vN-Gwt"/>
+                            <constraint firstItem="wUm-A2-x4s" firstAttribute="leading" secondItem="fsh-lA-c7f" secondAttribute="leading" id="mcw-ZP-pl5"/>
+                            <constraint firstItem="glD-Ba-XgL" firstAttribute="top" secondItem="wUm-A2-x4s" secondAttribute="bottom" id="pyk-Q9-yyt"/>
+                            <constraint firstItem="wUm-A2-x4s" firstAttribute="top" secondItem="fsh-lA-c7f" secondAttribute="top" id="xrH-cW-bcY"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kV5-UR-hu5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="907" y="846"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="3cI-sJ-GEm">
+            <objects>
+                <viewController id="OV1-Hm-vfc" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dJA-zO-fD1">
+                        <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zCT-Td-g9L" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Dungeon" width="2652" height="1616"/>
+        <image name="Forest" width="1920" height="1200"/>
+        <image name="Gardens" width="1600" height="900"/>
+        <image name="KlausAngry" width="240" height="317"/>
+        <image name="Stone" width="256" height="251"/>
+        <image name="Throne" width="1920" height="1080"/>
+        <image name="curtainSide" width="830" height="1288"/>
+        <image name="frog" width="400" height="400"/>
+        <image name="justin" width="499" height="659"/>
+        <image name="kingBody" width="1400" height="860"/>
+        <image name="knight" width="400" height="400"/>
+        <image name="topCurtain" width="1920" height="1080"/>
+        <image name="witch" width="400" height="400"/>
+    </resources>
+</document>
