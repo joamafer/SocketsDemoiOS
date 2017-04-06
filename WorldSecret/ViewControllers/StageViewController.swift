@@ -32,6 +32,8 @@ class StageViewController: UIViewController {
     @IBOutlet weak var rightCurtainTrailingConstraint: NSLayoutConstraint!
     @IBOutlet var leftCurtainTrailingConstraint: NSLayoutConstraint!
     @IBOutlet weak var topCurtainTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var princeRicardoLabelTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var princeRicardoLabel: UILabel!
     
     var forestViewController: ForestViewController!
     var gardenViewController: GardenViewController!
@@ -47,13 +49,20 @@ class StageViewController: UIViewController {
             closeCurtains(completion: { _ in
                 switch currentStage {
                 case .forest:
+                    
+                    UIView.animate(withDuration: 0.2, animations: {
+                        self.princeRicardoLabel.alpha = 0.0
+                    }) { _ in
+                        self.princeRicardoLabel.removeFromSuperview()
+                    }
+                    
                     self.currentViewController = self.forestViewController
                 case .garden:
                     self.currentViewController = self.gardenViewController
                 case .dungeon:
-                    self.currentViewController = self.throneViewController
+                    self.currentViewController = self.dungeonViewController
                 case .throne:
-                    break
+                    self.currentViewController = self.throneViewController
                 }
             })
         }
@@ -82,6 +91,15 @@ class StageViewController: UIViewController {
         throneViewController = mainStoryBoard.instantiateViewController(withIdentifier: String(describing: ThroneViewController.self)) as! ThroneViewController
         
         NotificationCenter.default.addObserver(self, selector: #selector(ForestViewController.actionDone), name: Notification.Name.startGame, object: nil)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        self.princeRicardoLabelTopConstraint.constant = 0
+        UIView.animate(withDuration: 3.0) { 
+            self.view.layoutIfNeeded()
+        }
     }
     
     // MARK: - Setup
